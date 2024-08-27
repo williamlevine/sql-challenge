@@ -1,1 +1,7 @@
 # sql-challenge
+
+This repository contains all of my files for Module 9's challenge assignment, concerning Pewlett Hackard. I used PostgreSQL in pgAdmin 4 to write and run my queries. The folder titled `EmployeeSQL` contains my `.sql` files, the `.csv` source data files (contained within the subfolder titled `data`), an image of my Entity Relationship Diagram titled `ERD.png`, and a `.ipynb` file that I used to do some data cleaning.
+
+The code used to establish the table schemata can be found in the `pewlett_hackard_schema.sql` file. The queries used for the Data Analysis section of this challenge can be found in `pewlett_hackard_queries.sql`. The queries file has comments above each query corresponding to each required task for the challenge.
+
+When looking at the original `.csv` files that were provided in the starter code, I noticed that in the `employees.csv`, the dates were in format mm/dd/yyyy. I looked into this and learned that in the SQL "DATE" data type, it is preferable if dates are in format yyyy-mm-dd. I decided to change the colums for birth date and hire date to match this preferred formatting. Do do this, I used Pandas in a Jupyter Notebook file, which can be found in the `EmployeeSQL` folder as `employees_processing.ipynb`. This code output a new `.csv` file into the `data` folder called `employees_processed.csv`. I used this CSV file instead of the orignial one (titled `employees.csv`) when importing my data into the employees table in pgAdmin. Both CSV files can be found in the `data` folder.
